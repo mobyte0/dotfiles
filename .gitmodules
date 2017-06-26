@@ -12,5 +12,5 @@
 	   path = emacs/.emacs.d/lisp/magit
 	   url = https://github.com/magit/magit.git
 [submodule "with-editor"]
-	   path = emacs/.emacs.d/lisp/dash.el
+	   path = emacs/.emacs.d/lisp/with-editor
 	   url = https://github.com/magit/with-editor.git
