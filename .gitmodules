@@ -1,0 +1,16 @@
+# emacs
+[submodule "dash.el"]
+	   path = emacs/.emacs.d/lisp/dash.el
+	   url = https://github.com/magnars/dash.el.git
+[submodule "emacs-async"]
+	   path = emacs/.emacs.d/lisp/emacs-async
+	   url = https://github.com/jwiegley/emacs-async.git
+[submodule "helm"]
+	   path = emacs/.emacs.d/lisp/helm
+	   url = https://github.com/emacs-helm/helm.git
+[submodule "magit"]
+	   path = emacs/.emacs.d/lisp/magit
+	   url = https://github.com/magit/magit.git
+[submodule "with-editor"]
+	   path = emacs/.emacs.d/lisp/dash.el
+	   url = https://github.com/magit/with-editor.git
