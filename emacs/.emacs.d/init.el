@@ -12,6 +12,10 @@
 (dired-async-mode 1)
 (add-to-list 'load-path "~/.emacs.d/lisp/helm")
 (require 'helm-config)
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+(helm-mode 1)
 ;; Display line numbers
 (load "lisp/nlinum-1.7")
 (global-nlinum-mode)
@@ -22,6 +26,10 @@
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
+;; Undo Tree
+(load "lisp/undo-tree")
+(global-undo-tree-mode)
+(setq-default undo-tree-visualizer-timestamps t)
 
 ;;; Setup Appearance
 ;; Enable color theme
@@ -37,6 +45,19 @@
 ;; Disable menu and tool bars
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+;; Highlight tail
+(load "lisp/highlight-tail")
+(require 'highlight-tail)
+(setq highlight-tail-colors '(
+			      ("#434c5e" . 0)
+			      ("#3b4252" . 40)
+			      ("#2e3440" . 80)
+			      ))
+(setq highlight-tail-steps 150
+      highlight-tail-timer 0.01)
+(setq highlight-tail-posterior-type 't)
+(highlight-tail-mode)
+(highlight-tail-reload)
 
 ;;; Indentation Settings
 ;; Enable smart tabs
