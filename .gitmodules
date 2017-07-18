@@ -17,31 +17,34 @@
 	   url = https://github.com/magit/with-editor.git
 [submodule "diff-hl"]
 	   path = emacs/.emacs.d/lisp/diff-hl
-	   url = https://github.com/dgutov/diff-hl
+	   url = https://github.com/dgutov/diff-hl.git
 # themes
 [submodule "color-theme-molokai"]
 	   path = emacs/.emacs.d/themes/color-theme-molokai
-	   url = https://github.com/alloy-d/color-theme-molokai
+	   url = https://github.com/alloy-d/color-theme-molokai.git
 [submodule "cyberpunk-theme.el"]
 	   path = emacs/.emacs.d/themes/cyberpunk-theme.el
-	   url = https://github.com/n3mo/cyberpunk-theme.el
+	   url = https://github.com/n3mo/cyberpunk-theme.el.git
 [submodule "monokai-emacs"]
 	   path = emacs/.emacs.d/themes/monokai-emacs
-	   url = https://github.com/oneKelvinSmith/monokai-emacs
+	   url = https://github.com/oneKelvinSmith/monokai-emacs.git
 
 ## scripts
 [submodule "bsod"]
 	   path = scripts/.scripts/fun/bsod
-	   url = https://github.com/mobyte0/bsod
+	   url = https://github.com/mobyte0/bsod.git
 [submodule "cmatrix"]
 	   path = scripts/.scripts/fun/cmatrix
-	   url = https://github.com/abishekvashok/cmatrix
+	   url = https://github.com/abishekvashok/cmatrix.git
 [submodule "mapscii"]
 	   path = scripts/.scripts/fun/mapscii
-	   url = https://github.com/rastapasta/mapscii
+	   url = https://github.com/rastapasta/mapscii.git
 [submodule "rice"]
 	   path = scripts/.scripts/fun/rice
-	   url = https://github.com/janbrennen/rice
+	   url = https://github.com/janbrennen/rice.git
 [submodule "sl"]
 	   path = scripts/.scripts/fun/sl
-	   url = https://github.com/mtoyoda/sl
+	   url = https://github.com/mtoyoda/sl.git
+[submodule "pipes.sh"]
+	   path = scripts/.scripts/fun/pipes.sh
+	   url = https://github.com/pipeseroni/pipes.sh.git
