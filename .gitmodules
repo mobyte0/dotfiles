@@ -28,3 +28,20 @@
 [submodule "monokai-emacs"]
 	   path = emacs/.emacs.d/themes/monokai-emacs
 	   url = https://github.com/oneKelvinSmith/monokai-emacs
+
+## scripts
+[submodule "bsod"]
+	   path = scripts/.scripts/fun/bsod
+	   url = https://github.com/mobyte0/bsod
+[submodule "cmatrix"]
+	   path = scripts/.scripts/fun/cmatrix
+	   url = https://github.com/abishekvashok/cmatrix
+[submodule "mapscii"]
+	   path = scripts/.scripts/fun/mapscii
+	   url = https://github.com/rastapasta/mapscii
+[submodule "rice"]
+	   path = scripts/.scripts/fun/rice
+	   url = https://github.com/janbrennen/rice
+[submodule "sl"]
+	   path = scripts/.scripts/fun/sl
+	   url = https://github.com/mtoyoda/sl

@@ -1,5 +1,14 @@
 * dotfiles
 ** changelog
+<<<<<<< HEAD
+*** [2017-07-18 Tue 16:02]
+    + scripts
+      + [!] fixed some gitmodule stuff
+    + etc
+      + .gitignore
+	+ [+] added missing modules
+=======
+>>>>>>> 333206d... whole buncha updates
 *** [2017-07-12 Wed 11:26]
     + emacs
       + [+] added some big cool text ascii art
