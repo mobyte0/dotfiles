@@ -1,0 +1,35 @@
+* dotfiles
+** changelog
+*** [2017-07-12 Wed 11:26]
+    + emacs
+      + [+] added some big cool text ascii art
+      + [+] added line highlight mode
+      + [!] swapped out nord for monokai for now
+      + [-] commenting out highlight-tail for now, going to see if it's something i still want and if i can pick some better colors for it
+      + [!] changed the git section header, since now i'm using diff-hl
+      + [+] added diff-hl to show changes in the margin
+      + [+] dif-hl is also set to auto update when changes are made and it has some customized colors and displays symbols
+      + [-] removed extra blank line at the bottom, i don't even know how that happened
+      + [+] added these themes: molokai, cyberpunk, monokai
+    + scripts
+      + [+] added the following scripts into the fun/ricing directory:
+	+ [+] bsod
+	+ [+] cmatrix
+	+ [+] mapscii
+	+ [+] rice (color display, fake hacking, pipes.sh, hacker typer)
+    + scrot
+      + [+] added this directory for screenshots
+      + [+] screenshot of dat 1500000000 timestamp
+    + etc
+      + .gitignore
+	+ [!] removal of blacklist for emacs, going to use a whitelist instead
+      + .gitmodules
+	+ [+] added theese git modules:
+	  + [+] diff-hl
+	  + [+] color-theme-molokai
+	  + [+] cyberpunk-theme.el
+	  + [+] monokai-emacs
+      + CHANGELOG.org
+	+ [+] this file you are reading right now, going to use this for keeping track of changes
+      + README.org
+	+ [+] added some blurb text about the different dotfile directories

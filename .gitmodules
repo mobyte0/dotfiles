@@ -1,4 +1,5 @@
-# emacs
+## emacs
+# lisp
 [submodule "dash.el"]
 	   path = emacs/.emacs.d/lisp/dash.el
 	   url = https://github.com/magnars/dash.el.git
@@ -14,3 +15,16 @@
 [submodule "with-editor"]
 	   path = emacs/.emacs.d/lisp/with-editor
 	   url = https://github.com/magit/with-editor.git
+[submodule "diff-hl"]
+	   path = emacs/.emacs.d/lisp/diff-hl
+	   url = https://github.com/dgutov/diff-hl
+# themes
+[submodule "color-theme-molokai"]
+	   path = emacs/.emacs.d/themes/color-theme-molokai
+	   url = https://github.com/alloy-d/color-theme-molokai
+[submodule "cyberpunk-theme.el"]
+	   path = emacs/.emacs.d/themes/cyberpunk-theme.el
+	   url = https://github.com/n3mo/cyberpunk-theme.el
+[submodule "monokai-emacs"]
+	   path = emacs/.emacs.d/themes/monokai-emacs
+	   url = https://github.com/oneKelvinSmith/monokai-emacs
