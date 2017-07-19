@@ -6,7 +6,10 @@
 #  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ 
 
 * dotfiles
-** changelo
+** changelog
+*** [2017-07-19 Wed 12:56]
+    + fish
+      + [!] i'm still a noob when it comes to gnu stow, renamed the fish directories for easier management
 *** [2017-07-19 Wed 12:19]
     + fish
       + [+] added functions for opening an emacs client, starting an emacs daemon, and killing emacs
