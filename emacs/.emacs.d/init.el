@@ -41,6 +41,10 @@
 (load "lisp/undo-tree")
 (global-undo-tree-mode)
 (setq-default undo-tree-visualizer-timestamps t)
+;; which-key
+(load "lisp/emacs-which-key/which-key")
+(which-key-mode)
+(setq which-key-idle-delay 0.25)
 
 ;;; Setup Appearance
 ;; Enable color theme
@@ -56,19 +60,6 @@
 ;; Disable menu and tool bars
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-;; Highlight tail
-;(load "lisp/highlight-tail")
-;(require 'highlight-tail)
-;(setq highlight-tail-colors '(
-;			      ("#434c5e" . 0)
-;			      ("#3b4252" . 40)
-;			      ("#2e3440" . 80)
-;			      ))
-;(setq highlight-tail-steps 150
-;      highlight-tail-timer 0.01)
-;(setq highlight-tail-posterior-type 't)
-;(highlight-tail-mode)
-;(highlight-tail-reload)
 
 ;;; Indentation Settings
 ;; Enable smart tabs

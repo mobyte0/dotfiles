@@ -7,6 +7,12 @@
 
 * dotfiles
 ** changelog
+*** [2017-07-21 Fri 13:14]
+    + emacs
+      + [+] added which-key mode, configured it in the init.el file
+    + etc
+      + .gitignore
+	+ [+] added module for which-key
 *** [2017-07-19 Wed 12:56]
     + fish
       + [!] i'm still a noob when it comes to gnu stow, renamed the fish directories for easier management

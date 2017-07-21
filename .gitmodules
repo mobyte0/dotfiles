@@ -27,6 +27,9 @@
 [submodule "diff-hl"]
 	   path = emacs/.emacs.d/lisp/diff-hl
 	   url = https://github.com/dgutov/diff-hl.git
+[submodule "emacs-which-key"]
+	   path = emacs/.emacs.d/lisp/emacs-which-key
+	   url = https://github.com/justbur/emacs-which-key.git
 # themes
 [submodule "color-theme-molokai"]
 	   path = emacs/.emacs.d/themes/color-theme-molokai
