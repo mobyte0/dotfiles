@@ -36,7 +36,11 @@
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; scroll one line at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-(setq scroll-step 1) ;; keyboard scroll one line at a time
+(setq redisplay-dont-pause t
+  scroll-margin 1
+  scroll-step 1
+  scroll-conservatively 10000
+  scroll-preserve-screen-position 1)
 ;; Undo Tree
 (load "lisp/undo-tree")
 (global-undo-tree-mode)

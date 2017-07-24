@@ -7,6 +7,9 @@
 
 * dotfiles
 ** changelog
+*** [2017-07-24 Mon 11:59]
+    + emacs
+      + [!] changed the way my keyboard smooth scrolling works
 *** [2017-07-21 Fri 13:14]
     + emacs
       + [+] added which-key mode, configured it in the init.el file
