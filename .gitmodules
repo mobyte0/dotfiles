@@ -30,6 +30,9 @@
 [submodule "emacs-which-key"]
 	   path = emacs/.emacs.d/lisp/emacs-which-key
 	   url = https://github.com/justbur/emacs-which-key.git
+[submodule "emacs-neotree"]
+	   path = emacs/.emacs.d/lisp/emacs-neotree
+	   url = https://github.com/jaypei/emacs-neotree.git
 # themes
 [submodule "color-theme-molokai"]
 	   path = emacs/.emacs.d/themes/color-theme-molokai

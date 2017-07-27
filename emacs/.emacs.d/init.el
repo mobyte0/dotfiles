@@ -8,7 +8,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'load-path "~/.emacs.d")
 (package-initialize)
 
@@ -49,6 +50,11 @@
 (load "lisp/emacs-which-key/which-key")
 (which-key-mode)
 (setq which-key-idle-delay 0.25)
+;; neotree
+(load "lisp/emacs-neotree/neotree.el")
+(global-set-key [f6] 'neotree-toggle)
+(setq-default neo-theme "ascii")
+(setq-default neo-show-hidden-files t)
 
 ;;; Setup Appearance
 ;; Enable color theme
@@ -64,6 +70,19 @@
 ;; Disable menu and tool bars
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+;; Column 80 indicator
+(load "lisp/Fill-Column-Indicator/fill-column-indicator")
+(setq-default fci-rule-column 80)
+(setq fci-handle-truncate-lines nil)
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode 1)
+(defun auto-fci-mode (&optional unused)
+  (if (> (window-width) fci-rule-column)
+      (fci-mode 1)
+    (fci-mode 0))
+  )
+(add-hook 'after-change-major-mode-hook 'auto-fci-mode)
+(add-hook 'window-configuration-change-hook 'auto-fci-mode)
 
 ;;; Indentation Settings
 ;; Enable smart tabs
