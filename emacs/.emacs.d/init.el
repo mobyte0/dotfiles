@@ -25,6 +25,8 @@
 (global-set-key (kbd "M-x") #'helm-M-x)
 (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
 (global-set-key (kbd "C-x C-f") #'helm-find-files)
+;(helm-autoresize-mode 1)
+;(setq helm-autoresize-min-height 20)
 (helm-mode 1)
 ;; Display line numbers
 (load "lisp/nlinum-1.7")
@@ -51,9 +53,9 @@
 (which-key-mode)
 (setq which-key-idle-delay 0.25)
 ;; neotree
-(load "lisp/emacs-neotree/neotree.el")
+(load "lisp/emacs-neotree/neotree")
 (global-set-key [f6] 'neotree-toggle)
-(setq-default neo-theme "ascii")
+(setq neo-theme "ascii")
 (setq-default neo-show-hidden-files t)
 
 ;;; Setup Appearance
@@ -67,6 +69,8 @@
 ;; Disable visual scroll bar
 (add-to-list 'default-frame-alist
              '(vertical-scroll-bars . nil))
+;; Blinking cursor
+(blink-cursor-mode 1)
 ;; Disable menu and tool bars
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -76,6 +80,7 @@
 (setq fci-handle-truncate-lines nil)
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (global-fci-mode 1)
+; snippet from https://www.emacswiki.org/emacs/FillColumnIndicator#toc17
 (defun auto-fci-mode (&optional unused)
   (if (> (window-width) fci-rule-column)
       (fci-mode 1)
@@ -96,7 +101,7 @@
 
 ;;; git packages
 (load "lisp/dash.el/dash")
-(load "lisp/dash.el/dash-functional.el")
+(load "lisp/dash.el/dash-functional")
 (load "lisp/with-editor/with-editor")
 (load "lisp/diff-hl/diff-hl")
 (load "lisp/diff-hl/diff-hl-flydiff")
@@ -116,6 +121,33 @@
  '(diff-hl-delete ((t (:foreground "background")))))
 (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
+;;; Syntax/spellchecking
+;; Spellchecking
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+;; flycheck
+(load "lisp/flycheck/flycheck")
+(add-hook 'after-init-hook #'global-flycheck-mode)
+; snippet from https://git.io/v7CzO
+(defun toggle-flycheck-error-buffer ()
+  (interactive) ;; Toggle a flycheck error buffer.
+  (if (string-match-p "Flycheck errors" (format "%s" (window-list)))
+      (dolist (w (window-list))
+        (when (string-match-p "*Flycheck errors*"
+			      (buffer-name (window-buffer w)))
+          (delete-window w)
+          ))
+    (flycheck-list-errors)
+    )
+  )
+(global-set-key (kbd "<f5>") 'toggle-flycheck-error-buffer)
+; snippet from https://git.io/v7CzU
+(defadvice flycheck-error-list-refresh (around shrink-error-list activate)
+  ad-do-it
+  (-when-let (window (flycheck-get-error-list-window t))
+    (with-selected-window window
+      (fit-window-to-buffer window 10))))
+
 ;;; File management
 (setq make-backup-files nil)
 (setq auto-save-default nil)
@@ -123,4 +155,4 @@
 (load custom-file)
 
 ;;; Other various emacs packages
-(load "lisp/try.el")
+(load "lisp/try")

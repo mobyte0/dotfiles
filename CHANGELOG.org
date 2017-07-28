@@ -7,6 +7,16 @@
 
 * dotfiles
 ** changelog
+*** [2017-07-28 Fri 15:21]
+    + emacs
+      + [+] blinking cursor because why not
+      + [+] added spell checking with flyspell
+      + [+] added linting with flycheck
+      + [+] added a key macro to open a flycheck buffer with the current errors, dynamically resizes
+      + [!] some other very minor changes, formatting/rearranging
+      + [!] pulled some committed changes from the repos of a couple packages
+    + scrot
+      + [+] took a screenshot of my current emacs setup with the neotree and flycheck buffers
 *** [2017-07-27 Thu 17:01]
     + emacs
       + [!] very minor format changes in the init file
