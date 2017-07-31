@@ -33,6 +33,12 @@
 [submodule "emacs-neotree"]
 	   path = emacs/.emacs.d/lisp/emacs-neotree
 	   url = https://github.com/jaypei/emacs-neotree.git
+[submodule "Fill-Column-Indicator"]
+	   path = emacs/.emacs.d/lisp/Fill-Column-Indicator
+	   url = https://github.com/alpaker/Fill-Column-Indicator.git
+[submodule "flycheck"]
+	   path = emacs/.emacs.d/lisp/flycheck
+	   url = https://github.com/flycheck/flycheck.git
 # themes
 [submodule "color-theme-molokai"]
 	   path = emacs/.emacs.d/themes/color-theme-molokai
