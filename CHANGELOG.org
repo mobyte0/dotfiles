@@ -7,6 +7,10 @@
 
 * dotfiles
 ** changelog
+*** [2017-07-31 Mon 12:07]
+    + etc
+      + .gitmodules
+	+ [!] fixed gitmodules again (for reals this time)
 *** [2017-07-31 Mon 10:42]
     + etc
       + .gitmodules
