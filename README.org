@@ -17,7 +17,8 @@
 
 .config/fish - my fish configuration with functions
 emacs/.emacs.d - emacs is my main text editor, contains my standard setup and packages
-scripts/fun - extremely essential scripts for rice
+scripts/.scripts - useful utility scripts
+scripts/.scripts/fun - extremely essential scripts for rice
 scrot/.scrot - directory for holding screenshots
 #+END_SRC
 
