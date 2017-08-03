@@ -7,6 +7,10 @@
 
 * dotfiles
 ** changelog
+*** [2017-08-03 Thu 17:07]
+    + cowsay
+      + [+] added a cowsay directory
+      + [+] added dynamic_duo.cow
 *** [2017-07-31 Mon 12:21]
     + scripts
       + [+] created literally a one line script to update git submodules because i'm lazy
