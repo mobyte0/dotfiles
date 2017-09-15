@@ -93,6 +93,8 @@
 ;; Enable smart tabs
 (load "lisp/smart-tabs-mode")
 (smart-tabs-insinuate 'c 'javascript)
+(setq indent-tabs-mode t)
+(setq-default tab-width 4)
 (setq-default backward-delete-char-untabify-method nil)
 
 ;;; Keybindings
@@ -147,6 +149,28 @@
   (-when-let (window (flycheck-get-error-list-window t))
     (with-selected-window window
       (fit-window-to-buffer window 10))))
+
+;;; Coding Modes
+;; web-mode
+; snippets from http://web-mode.org/
+(add-to-list 'load-path "~/.emacs.d/lisp/web-mode")
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(setq web-mode-enable-auto-closing t)
+(setq web-mode-enable-auto-pairing t)
+(defun main-web-mode-hook ()
+  "Main hooks, indentation, etc."
+  (web-mode-use-tabs)
+  (setq web-mode-markup-indent-offset 4)
+)
+(add-hook 'web-mode-hook 'main-web-mode-hook)
 
 ;;; File management
 (setq make-backup-files nil)

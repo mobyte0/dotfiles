@@ -7,6 +7,10 @@
 
 * dotfiles
 ** changelog
+*** <2017-09-15 Fri 12:09>
+	+ emacs
+	  + [+] web mode
+	  + [+] added some tab indentation stuff because i like tabs
 *** [2017-08-03 Thu 17:07]
     + cowsay
       + [+] added a cowsay directory

@@ -39,6 +39,9 @@
 [submodule "flycheck"]
 	   path = emacs/.emacs.d/lisp/flycheck
 	   url = https://github.com/flycheck/flycheck.git
+[submodule "web-mode"]
+	   path = emacs/.emacs.d/lisp/web-mode
+	   url = https://github.com/fxbois/web-mode.git
 # themes
 [submodule "color-theme-molokai"]
 	   path = emacs/.emacs.d/themes/color-theme-molokai
