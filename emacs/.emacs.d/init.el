@@ -1,3 +1,5 @@
+;;; init --- main emacs config
+;;; Commentary:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ██╗███╗   ██╗██╗████████╗███████╗██╗      ;;
 ;; ██║████╗  ██║██║╚══██╔══╝██╔════╝██║      ;;
@@ -7,6 +9,7 @@
 ;; ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝╚══════╝╚══════╝ ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;; Code:
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.milkbox.net/packages/"))
@@ -89,6 +92,36 @@
 (add-hook 'after-change-major-mode-hook 'auto-fci-mode)
 (add-hook 'window-configuration-change-hook 'auto-fci-mode)
 
+;;; Coding Modes
+;; org-mode
+(setq-default org-src-fontify-natively t)
+(setq-default org-startup-truncated nil)
+;; web-mode
+; snippets from http://web-mode.org/
+(add-to-list 'load-path "~/.emacs.d/lisp/web-mode")
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(setq web-mode-enable-auto-closing t)
+(setq web-mode-enable-auto-pairing t)
+(defun main-web-mode-hook ()
+  ;; Main hooks, indentation, etc.
+  (web-mode-use-tabs)
+  (setq indent-tabs-mode t)
+  (setq-default tab-width 4)
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-css-indent-offset 4)
+  (setq web-mode-code-indent-offset 4)
+  (setq web-mode-indent-style 4)
+)
+(add-hook 'web-mode-hook 'main-web-mode-hook)
+
 ;;; Indentation Settings
 ;; Enable smart tabs
 (load "lisp/smart-tabs-mode")
@@ -143,34 +176,55 @@
     )
   )
 (global-set-key (kbd "<f5>") 'toggle-flycheck-error-buffer)
+;; auto-correct
+; snippet from http://endlessparentheses.com/ispell-and-abbrev-the-perfect-auto-correct.html
+(define-key ctl-x-map "\C-i"
+  #'endless/ispell-word-then-abbrev)
+
+(defun endless/simple-get-word ()
+  (car-safe (save-excursion (ispell-get-word nil))))
+
+(defun endless/ispell-word-then-abbrev (p)
+  "Call `ispell-word', then create an abbrev for it.
+With prefix P, create local abbrev. Otherwise it will
+be global.
+If there's nothing wrong with the word at point, keep
+looking for a typo until the beginning of buffer. You can
+skip typos you don't want to fix with `SPC', and you can
+abort completely with `C-g'."
+  (interactive "P")
+  (let (bef aft)
+    (save-excursion
+      (while (if (setq bef (endless/simple-get-word))
+                 ;; Word was corrected or used quit.
+                 (if (ispell-word nil 'quiet)
+                     nil ; End the loop.
+                   ;; Also end if we reach `bob'.
+                   (not (bobp)))
+               ;; If there's no word at point, keep looking
+               ;; until `bob'.
+               (not (bobp)))
+        (backward-word)
+        (backward-char))
+      (setq aft (endless/simple-get-word)))
+    (if (and aft bef (not (equal aft bef)))
+        (let ((aft (downcase aft))
+              (bef (downcase bef)))
+          (define-abbrev
+            (if p local-abbrev-table global-abbrev-table)
+            bef aft)
+          (message "\"%s\" now expands to \"%s\" %sally"
+                   bef aft (if p "loc" "glob")))
+      (user-error "No typo at or before point"))))
+
+(setq save-abbrevs 'silently)
+(setq-default abbrev-mode t)
 ; snippet from https://git.io/v7CzU
 (defadvice flycheck-error-list-refresh (around shrink-error-list activate)
   ad-do-it
   (-when-let (window (flycheck-get-error-list-window t))
     (with-selected-window window
       (fit-window-to-buffer window 10))))
-
-;;; Coding Modes
-;; web-mode
-; snippets from http://web-mode.org/
-(add-to-list 'load-path "~/.emacs.d/lisp/web-mode")
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(setq web-mode-enable-auto-closing t)
-(setq web-mode-enable-auto-pairing t)
-(defun main-web-mode-hook ()
-  "Main hooks, indentation, etc."
-  (web-mode-use-tabs)
-  (setq web-mode-markup-indent-offset 4)
-)
-(add-hook 'web-mode-hook 'main-web-mode-hook)
 
 ;;; File management
 (setq make-backup-files nil)
@@ -180,3 +234,6 @@
 
 ;;; Other various emacs packages
 (load "lisp/try")
+
+(provide 'init)
+;;; init ends here
