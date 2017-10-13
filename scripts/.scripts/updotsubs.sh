@@ -9,4 +9,9 @@
 ###################################################################################################
 # update submodules for muh dotfiles
 
+
+git submodule foreach git fetch
+git submodule update
+git fetch --recurse-submodules
+git submodule foreach git pull origin master
 git submodule update --init --recursive --remote /home/$USER/dotfiles/

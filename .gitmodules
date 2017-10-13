@@ -42,6 +42,15 @@
 [submodule "web-mode"]
 	   path = emacs/.emacs.d/lisp/web-mode
 	   url = https://github.com/fxbois/web-mode.git
+[submodule "emacs-https-server"]
+	   path = emacs/.emacs.d/lisp/emacs-https-server
+	   url = https://github.com/jrhbailey/emacs-http-server.git
+[submodule "js2-mode"]
+	   path = emacs/.emacs.d/lisp/js2-mode
+	   url = https://github.com/mooz/js2-mode.git
+[submodule "skewer-mode"]
+	   path = emacs/.emacs.d/lisp/skewer-mode
+	   url = https://github.com/skeeto/skewer-mode.git
 # themes
 [submodule "color-theme-molokai"]
 	   path = emacs/.emacs.d/themes/color-theme-molokai
