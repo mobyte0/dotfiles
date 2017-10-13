@@ -236,6 +236,7 @@ abort completely with `C-g'."
 (load "lisp/try")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;;; auto correct thing
 (define-key ctl-x-map "\C-i"
   #'endless/ispell-word-then-abbrev)
@@ -283,3 +284,7 @@ abort completely with `C-g'."
 ;;; init ends here
 >>>>>>> 08a06c248fd1cee7b7637e0024b0299107f89576
 (put 'dired-find-alternate-file 'disabled nil)
+=======
+(provide 'init)
+;;; init ends here
+>>>>>>> 08a06c248fd1cee7b7637e0024b0299107f89576
