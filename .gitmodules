@@ -6,87 +6,81 @@
 # ██╗╚██████╔╝██║   ██║   ██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗███████║ #
 # ╚═╝ ╚═════╝ ╚═╝   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝ #
 #########################################################################################
-
-## emacs
-# lisp
-[submodule "dash.el"]
-	   path = emacs/.emacs.d/lisp/dash.el
-	   url = https://github.com/magnars/dash.el.git
-[submodule "emacs-async"]
-	   path = emacs/.emacs.d/lisp/emacs-async
-	   url = https://github.com/jwiegley/emacs-async.git
-[submodule "helm"]
-	   path = emacs/.emacs.d/lisp/helm
-	   url = https://github.com/emacs-helm/helm.git
-[submodule "magit"]
-	   path = emacs/.emacs.d/lisp/magit
-	   url = https://github.com/magit/magit.git
-[submodule "with-editor"]
-	   path = emacs/.emacs.d/lisp/with-editor
-	   url = https://github.com/magit/with-editor.git
-[submodule "diff-hl"]
-	   path = emacs/.emacs.d/lisp/diff-hl
-	   url = https://github.com/dgutov/diff-hl.git
-[submodule "emacs-which-key"]
-	   path = emacs/.emacs.d/lisp/emacs-which-key
-	   url = https://github.com/justbur/emacs-which-key.git
-[submodule "emacs-neotree"]
-	   path = emacs/.emacs.d/lisp/emacs-neotree
-	   url = https://github.com/jaypei/emacs-neotree.git
-[submodule "Fill-Column-Indicator"]
-	   path = emacs/.emacs.d/lisp/Fill-Column-Indicator
-	   url = https://github.com/alpaker/Fill-Column-Indicator.git
-[submodule "flycheck"]
-	   path = emacs/.emacs.d/lisp/flycheck
-	   url = https://github.com/flycheck/flycheck.git
-[submodule "web-mode"]
-	   path = emacs/.emacs.d/lisp/web-mode
-	   url = https://github.com/fxbois/web-mode.git
-[submodule "emacs-https-server"]
-	   path = emacs/.emacs.d/lisp/emacs-https-server
-	   url = https://github.com/jrhbailey/emacs-http-server.git
-[submodule "js2-mode"]
-	   path = emacs/.emacs.d/lisp/js2-mode
-	   url = https://github.com/mooz/js2-mode.git
-[submodule "skewer-mode"]
-	   path = emacs/.emacs.d/lisp/skewer-mode
-	   url = https://github.com/skeeto/skewer-mode.git
-[submodule "projectile"]
-	   path = emacs/.emacs.d/lisp/projectile
-	   url = https://github.com/bbatsov/projectile.git
-# themes
-[submodule "color-theme-molokai"]
-	   path = emacs/.emacs.d/themes/color-theme-molokai
-	   url = https://github.com/alloy-d/color-theme-molokai.git
-[submodule "cyberpunk-theme.el"]
-	   path = emacs/.emacs.d/themes/cyberpunk-theme.el
-	   url = https://github.com/n3mo/cyberpunk-theme.el.git
-[submodule "monokai-emacs"]
-	   path = emacs/.emacs.d/themes/monokai-emacs
-	   url = https://github.com/oneKelvinSmith/monokai-emacs.git
-
-## scripts
-[submodule "bsod"]
-	   path = scripts/.scripts/fun/bsod
-	   url = https://github.com/mobyte0/bsod.git
-[submodule "cmatrix"]
-	   path = scripts/.scripts/fun/cmatrix
-	   url = https://github.com/abishekvashok/cmatrix.git
-[submodule "mapscii"]
-	   path = scripts/.scripts/fun/mapscii
-	   url = https://github.com/rastapasta/mapscii.git
-[submodule "rice"]
-	   path = scripts/.scripts/fun/rice
-	   url = https://github.com/janbrennen/rice.git
-[submodule "sl"]
-	   path = scripts/.scripts/fun/sl
-	   url = https://github.com/mtoyoda/sl.git
-[submodule "pipes.sh"]
-	   path = scripts/.scripts/fun/pipes.sh
-	   url = https://github.com/pipeseroni/pipes.sh.git
-[submodule "cgames"]
-       path = scripts/.scripts/fun/cgames
-	   url = https://github.com/BR903/cgames.git
-[submodule "tspc"]
-	   path = scripts/.scripts/fun/tspc
-	   url = https://github.com/mtklr/tspc.git
+[submodule "emacs/.emacs.d/lisp/dash.el"]
+	path = emacs/.emacs.d/lisp/dash.el
+	url = git@github.com:magnars/dash.el.git
+[submodule "emacs/.emacs.d/lisp/emacs-async"]
+	path = emacs/.emacs.d/lisp/emacs-async
+	url = git@github.com:jwiegley/emacs-async.git
+[submodule "emacs/.emacs.d/lisp/helm"]
+	path = emacs/.emacs.d/lisp/helm
+	url = git@github.com:emacs-helm/helm.git
+[submodule "emacs/.emacs.d/lisp/with-editor"]
+	path = emacs/.emacs.d/lisp/with-editor
+	url = git@github.com:magit/with-editor.git
+[submodule "emacs/.emacs.d/lisp/magit"]
+	path = emacs/.emacs.d/lisp/magit
+	url = git@github.com:magit/magit.git
+[submodule "emacs/.emacs.d/lisp/diff-hl"]
+	path = emacs/.emacs.d/lisp/diff-hl
+	url = git@github.com:dgutov/diff-hl.git
+[submodule "emacs/.emacs.d/lisp/emacs-which-key"]
+	path = emacs/.emacs.d/lisp/emacs-which-key
+	url = git@github.com:justbur/emacs-which-key.git
+[submodule "emacs/.emacs.d/lisp/emacs-neotree"]
+	path = emacs/.emacs.d/lisp/emacs-neotree
+	url = git@github.com:jaypei/emacs-neotree.git
+[submodule "emacs/.emacs.d/lisp/Fill-Column-Indicator"]
+	path = emacs/.emacs.d/lisp/Fill-Column-Indicator
+	url = git@github.com:alpaker/Fill-Column-Indicator.git
+[submodule "emacs/.emacs.d/lisp/flycheck"]
+	path = emacs/.emacs.d/lisp/flycheck
+	url = git@github.com:flycheck/flycheck.git
+[submodule "emacs/.emacs.d/lisp/web-mode"]
+	path = emacs/.emacs.d/lisp/web-mode
+	url = git@github.com:fxbois/web-mode.git
+[submodule "emacs/.emacs.d/lisp/emacs-web-server"]
+	path = emacs/.emacs.d/lisp/emacs-web-server
+	url = git@github.com:skeeto/emacs-web-server.git
+[submodule "emacs/.emacs.d/lisp/skewer-mode"]
+	path = emacs/.emacs.d/lisp/skewer-mode
+	url = git@github.com:skeeto/skewer-mode.git
+[submodule "emacs/.emacs.d/lisp/js2-mode"]
+	path = emacs/.emacs.d/lisp/js2-mode
+	url = git@github.com:mooz/js2-mode.git
+[submodule "emacs/.emacs.d/lisp/projectile"]
+	path = emacs/.emacs.d/lisp/projectile
+	url = git@github.com:bbatsov/projectile.git
+[submodule "emacs/.emacs.d/themes/color-theme-molokai"]
+	path = emacs/.emacs.d/themes/color-theme-molokai
+	url = git@github.com:alloy-d/color-theme-molokai.git
+[submodule "emacs/.emacs.d/themes/cyberpunk-theme.el"]
+	path = emacs/.emacs.d/themes/cyberpunk-theme.el
+	url = git@github.com:n3mo/cyberpunk-theme.el.git
+[submodule "emacs/.emacs.d/themes/monokai-emacs"]
+	path = emacs/.emacs.d/themes/monokai-emacs
+	url = git@github.com:oneKelvinSmith/monokai-emacs.git
+[submodule "scripts/.scripts/fun/bsod"]
+	path = scripts/.scripts/fun/bsod
+	url = git@github.com:mobyte0/bsod.git
+[submodule "scripts/.scripts/fun/cmatrix"]
+	path = scripts/.scripts/fun/cmatrix
+	url = git@github.com:abishekvashok/cmatrix.git
+[submodule "scripts/.scripts/fun/mapscii"]
+	path = scripts/.scripts/fun/mapscii
+	url = git@github.com:rastapasta/mapscii.git
+[submodule "scripts/.scripts/fun/rice"]
+	path = scripts/.scripts/fun/rice
+	url = git@github.com:janbrennen/rice.git
+[submodule "scripts/.scripts/fun/sl"]
+	path = scripts/.scripts/fun/sl
+	url = git@github.com:mtoyoda/sl.git
+[submodule "scripts/.scripts/fun/pipes.sh"]
+	path = scripts/.scripts/fun/pipes.sh
+	url = git@github.com:pipeseroni/pipes.sh.git
+[submodule "scripts/.scripts/fun/cgames"]
+	path = scripts/.scripts/fun/cgames
+	url = git@github.com:BR903/cgames.git
+[submodule "scripts/.scripts/fun/tspc"]
+	path = scripts/.scripts/fun/tspc
+	url = git@github.com:mtklr/tspc.git
