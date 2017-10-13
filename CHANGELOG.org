@@ -7,6 +7,7 @@
 
 * dotfiles
 ** changelog
+<<<<<<< HEAD
 *** <2017-10-13 Fri 10:55>
 	+ submodules
 	  + [!] trying to update submodules
@@ -15,6 +16,13 @@
 	  + updotsubs.sh
 		+ [+] added some git submodule commands
 		  + i'll probably figure out submodules eventually
+=======
+*** <2017-10-10 Tue 9:00>
+    + emacs
+      + [+] cloned projectile, will test later
+      + [+] web-mode configuring
+      + [+] org-mode modifications
+>>>>>>> 08a06c248fd1cee7b7637e0024b0299107f89576
 *** <2017-09-15 Fri 12:09>
 	+ emacs
 	  + [+] web mode

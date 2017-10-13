@@ -51,6 +51,9 @@
 [submodule "skewer-mode"]
 	   path = emacs/.emacs.d/lisp/skewer-mode
 	   url = https://github.com/skeeto/skewer-mode.git
+[submodule "projectile"]
+	   path = emacs/.emacs.d/lisp/projectile
+	   url = https://github.com/bbatsov/projectile.git
 # themes
 [submodule "color-theme-molokai"]
 	   path = emacs/.emacs.d/themes/color-theme-molokai
@@ -81,3 +84,9 @@
 [submodule "pipes.sh"]
 	   path = scripts/.scripts/fun/pipes.sh
 	   url = https://github.com/pipeseroni/pipes.sh.git
+[submodule "cgames"]
+       path = scripts/.scripts/fun/cgames
+	   url = https://github.com/BR903/cgames.git
+[submodule "tspc"]
+	   path = scripts/.scripts/fun/tspc
+	   url = https://github.com/mtklr/tspc.git
